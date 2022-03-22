@@ -20,24 +20,49 @@ import {
   
     @Input() wordArray: string[] = [
       "Software Engineer",
+      "Web Engineer",
+      "Angular Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "NodeJS Developer",
+      "App Developer",
       "Full Stack Developer",
       "Mobile Developer",
       "IOS Developer",
-      "NodeJS Developer",
     ];
-    @Input() textColor = "#afafaf;";
+    @Input() textColor = "#afafaf";
     @Input() fontSize = "30px";
     @Input() blinkWidth = "2px";
     @Input() typingSpeedMilliseconds = 100;
-    @Input() deleteSpeedMilliseconds = 200;
+    @Input() deleteSpeedMilliseconds = 50;
   
     private i = 0;
+
+    private borderRightColorActive = true;
+    private borderRightColorSecondColor = 'transparent';
   
     constructor(private renderer: Renderer2) {}
   
     ngAfterViewInit(): void {
       this.initVariables();
       this.typingEffect();
+      this.blinkCursor();
+      setInterval(() => {
+        this.blinkCursor();
+      }, 500);
+    }
+
+    
+
+    private blinkCursor() {
+      const color = this.borderRightColorActive ? this.textColor : this.borderRightColorSecondColor;
+      this.borderRightColorActive = !this.borderRightColorActive;
+    
+      return this.renderer.setStyle(
+        this.blinkElement.nativeElement,
+        "border-right-color",
+        color,
+      );
     }
   
     private initVariables(): void {
@@ -56,14 +81,8 @@ import {
       this.renderer.setStyle(
         this.blinkElement.nativeElement,
         "border-right-width",
-        // this.blinkWidth
-        "4px"
-      );
-      this.renderer.setStyle(
-        this.blinkElement.nativeElement,
-        "border-right-color",
-        // this.textColor
-        "#d03d3d"
+        "3px",
+        // this.blinkWidth,
       );
       this.renderer.setStyle(
         this.blinkElement.nativeElement,
@@ -71,24 +90,39 @@ import {
         this.fontSize
       );
     }
+
+    private removeBlinking() {
+      this.borderRightColorSecondColor = this.textColor;
+    }
+
+    private addBlinking() {
+      this.borderRightColorSecondColor = 'transparent';
+    }
   
     private typingEffect(): void {
       const word = this.wordArray[this.i].split("");
       const loopTyping = () => {
+        this.removeBlinking();
         if (word.length > 0) {
           this.textElement.nativeElement.innerHTML += word.shift();
         } else {
-          this.deletingEffect();
+          this.addBlinking();
+          setTimeout(() => {
+            this.deletingEffect();
+          }, 5000);
           return;
         }
         setTimeout(loopTyping, this.typingSpeedMilliseconds);
       };
-      loopTyping();
+      setTimeout(() => {
+        loopTyping();
+      }, 1000);
     }
   
     private deletingEffect(): void {
       const word = this.wordArray[this.i].split("");
       const loopDeleting = () => {
+        this.removeBlinking();
         if (word.length > 0) {
           word.pop();
           this.textElement.nativeElement.innerHTML = word.join("");
@@ -101,6 +135,7 @@ import {
           this.typingEffect();
           return false;
         }
+        this.addBlinking();
         setTimeout(loopDeleting, this.deleteSpeedMilliseconds);
       };
       loopDeleting();

@@ -112,7 +112,7 @@ import {
           this.addBlinking();
           setTimeout(() => {
             this.deletingEffect();
-          }, 5000);
+          }, 3500);
           return;
         }
         setTimeout(loopTyping, this.typingSpeedMilliseconds);

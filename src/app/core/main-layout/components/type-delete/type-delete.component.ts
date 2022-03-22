@@ -32,6 +32,8 @@ import {
       "Cloud Engineer",
     ];
     @Input() textColor = "#afafaf";
+    @Input() blinkColor = "#afafaf";
+    // @Input() blinkColor = "hotpink";
     @Input() fontSize = "30px";
     @Input() blinkWidth = "2px";
     @Input() typingSpeedMilliseconds = 100;
@@ -56,7 +58,7 @@ import {
     
 
     private blinkCursor() {
-      const color = this.borderRightColorActive ? this.textColor : this.borderRightColorSecondColor;
+      const color = this.borderRightColorActive ? this.blinkColor : this.borderRightColorSecondColor;
       this.borderRightColorActive = !this.borderRightColorActive;
     
       return this.renderer.setStyle(
@@ -93,7 +95,7 @@ import {
     }
 
     private removeBlinking() {
-      this.borderRightColorSecondColor = this.textColor;
+      this.borderRightColorSecondColor = this.blinkColor;
     }
 
     private addBlinking() {

@@ -19,8 +19,7 @@ import {
       blinkElement!: ElementRef;
   
     @Input() wordArray: string[] = [
-      "Software Engineer",
-      "Web Engineer",
+      "Web Developer",
       "Angular Developer",
       "Frontend Developer",
       "Backend Developer",
@@ -29,6 +28,8 @@ import {
       "Full Stack Developer",
       "Mobile Developer",
       "IOS Developer",
+      "Software Engineer",
+      "Cloud Engineer",
     ];
     @Input() textColor = "#afafaf";
     @Input() fontSize = "30px";

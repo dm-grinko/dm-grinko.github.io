@@ -1,0 +1,15 @@
+.blink {
+    border-right-style: solid;
+    animation: 1s blink infinity;
+}
+
+.text {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}

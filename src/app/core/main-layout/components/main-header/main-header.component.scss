@@ -1,37 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Roboto+Mono:wght@100;600&display=swap');
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    // font-family: 'Roboto Mono', monospace;
+h3 {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-}
-
-ul {
-    list-style: none;
+    font-weight: 300;
     margin: 0;
     padding: 0;
-    li {
-        display: inline-block;
-        margin: 0 40px 40px 0;
-    }
 }
 
-ul>li>a {
-    text-decoration: none;
+.title {
+    text-align: center;
+    padding-top: 300px;
 }
 
-h3 {
-    font-size: 20px;
-    color: #5c708f;
-}
-
-p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    // color: #5c708f;
-    color: #333b4e;
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }

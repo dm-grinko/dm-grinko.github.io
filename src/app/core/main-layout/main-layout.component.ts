@@ -5,14 +5,6 @@ import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.scss'],
 })
-export class MainLayoutComponent implements OnInit, OnDestroy {
+export class MainLayoutComponent {
 
-  constructor(
-  ) {}
-
-  ngOnInit() {
-  }
-
-  ngOnDestroy() {
-  }
 }

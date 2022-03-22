@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-header.component.scss']
 })
 export class MainHeaderComponent {
-  init () {
 
-  }
-
-
-  
 }

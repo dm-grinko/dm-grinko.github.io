@@ -14,6 +14,8 @@ echo # a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     git push origin development
+
+    open https://github.com/dm-grinko/dm-grinko.github.io/compare/master...development
 else
     exit 1
 fi

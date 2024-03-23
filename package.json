@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "rm -rf ./docs && rm -rf ./dist && ng build && mv ./dist/browser ./docs",
+    "deploy": "git add . && git commit -m 'update resume' && git push origin main",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

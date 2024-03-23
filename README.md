@@ -1,27 +1,24 @@
-# DmitrygrinkoCom
+# Dmitry Grinko's Resume
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+## Summary
+Experienced Sr. Full Stack Developer, NodeJS Developer, and Cloud Infrastructure Engineer with over 8 years of hands-on experience. Skilled in backend API development, cloud management, and frontend design. Committed to continuous learning and teamwork for project success.
 
-## Development server
+## Work Experience
+- Led backend architecture transition from Node.js to Kotlin for Prometric.
+- Collaborated on successful infrastructure migration to Azure cloud for Kirkland & Ellis.
+- Addressed SQL injection vulnerabilities at Tektronix.
+- Designed Couchbase data archival strategy for improved performance at SweatWorks.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Certifications
+- AWS Certified Solutions Architect - Associate
+- AWS Certified Cloud Practitioner
+- Microsoft Certified: Azure Fundamentals
+- SumoLogic Certified Sumo Pro User
 
-## Code scaffolding
+## Skills
+- Cloud Infrastructure: AWS, Microsoft Azure, Terraform, Docker
+- Backend: Node.js, Express.js, MongoDB, SQL, RESTful API development
+- Tools: CI/CD (Jenkins, GitLab), Testing (Jest, Mocha, Chai), Containerization (Docker)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Education
+- Bachelor Of Civil Engineering from Brest State Technical University
